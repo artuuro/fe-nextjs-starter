@@ -1,7 +1,7 @@
 # AGENCIES-FE
 
 ### Prerequesities
-- Node.js [download here](https://nodejs.org/)
+- Download and setup Node.js [link](https://nodejs.org/)
 ### Command line
 - ``` npm i -g yarn ``` Installs yarn package manager globally (required)
 - ``` yarn ``` Installs development dependencies
