@@ -1,0 +1,50 @@
+@import 'variables';
+
+body {
+    padding-top: 80px;
+    @media (max-width: 380px) {
+        padding-top: 96px;
+    }
+    @media (min-width: 381px) and (max-width: 600px) {
+        padding-top: 75px;
+    }
+}
+
+.logo {
+    padding-top: 3px;
+    max-width: @navLogoWidth;
+}
+
+.padded {
+    padding: 10px;
+}
+
+.headingText {
+    color: @green;
+}
+
+.appBar {
+    border-bottom: 2px solid @green;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div { 
+        a {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: @green;
+            text-decoration: none;
+            transition: color .5s ease-in-out;
+            &.active,
+            &:hover {
+                color: @purple;
+            }
+            &:not(:first-child) {
+                margin-left: 14px;
+            }
+        }
+    }
+}
