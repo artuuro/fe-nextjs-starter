@@ -1,8 +1,10 @@
 # AGENCIES-FE
-### Commands:
-- Install latest NodeJS (12 or LTS)
-- ``` npm i -g yarn ``` Installs yarn globally
-- ``` yarn ``` Installs dependencies
-- ``` yarn dev ``` Starts development version with hot-reload (not bundled)
-- ``` yarn build ``` Created optimized production build (bundles & minifies everything)
+
+### Prerequesities
+- Node.js [download here](https://nodejs.org/dist/v12.10.0/node-v12.10.0-x64.msi)
+### Command line
+- ``` npm i -g yarn ``` Installs yarn package manager globally (required)
+- ``` yarn ``` Installs development dependencies
+- ``` yarn dev ``` Starts development version
+- ``` yarn build ``` Creates optimised production build
 - ``` yarn start ``` Runs production version
