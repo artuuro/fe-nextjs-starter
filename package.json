@@ -1,11 +1,8 @@
 {
   "name": "agencies-fe",
+  "description": "Front-end app",
   "version": "0.2.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/artuuro/agencies-fe.git"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,5 +20,11 @@
     "@zeit/next-less": "^1.0.1",
     "less": "^2.7.3",
     "webpack": "^4.39.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artuuro/agencies-fe.git"
+  },
+  "author": "Athur G. @artuuro",
+  "license": "UNLICENSED"
 }
