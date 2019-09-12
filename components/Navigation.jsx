@@ -3,19 +3,11 @@ import { Component, Fragment } from 'react';
 import { withRouter } from 'next/router';
 import css from '../less';
 
-type Links = { 
-    router: any,
-    links: { 
-        url: string; 
-        as: string; 
-    }[]; 
-}
+class Navigation extends Component {
+    links;
+    currentPage;
 
-class Navigation extends Component<Links> {
-    links: Array<any>;
-    currentPage: string;
-
-    constructor(props: Links) {
+    constructor(props) {
         super(props);
         this.links = props.links || [];
     }
@@ -25,7 +17,7 @@ class Navigation extends Component<Links> {
             <Fragment>
                 <div>
                     {
-                        this.links.map((link: any) =>
+                        this.links.map((link) =>
                             <Link key={link.url} href={link.url}>
                                 <a className={`${ this.props.router.route == `/${link.url}` ? css.active : '' }`}>{ link.as }</a>
                             </Link>

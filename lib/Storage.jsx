@@ -1,9 +1,7 @@
-import AppStorage from "../interfaces/AppStorage";
-
 class Storage {
-    storage: AppStorage;
+    storage;
 
-    constructor(store: AppStorage) {
+    constructor(store) {
         this.storage = store ? store : {};
     }
 
@@ -11,7 +9,7 @@ class Storage {
         return this.storage;
     }
 
-    put(records: Object) {
+    put(records) {
         const keys = Object.keys(records);
         let results = {};
         for (const key of keys) {
@@ -21,15 +19,15 @@ class Storage {
         return results;
     }
 
-    update(key: String, record: any) {
+    update(key, record) {
         return this.storage.setItem(key, record);
     }
 
-    get(key: String) {
+    get(key) {
         return this.storage.getItem(key);
     }
 
-    delete(key: String) {
+    delete(key) {
         return this.storage.removeItem(key);
     }
 

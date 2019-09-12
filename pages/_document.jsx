@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
 import { Fragment } from 'react';
 import { Theme } from '../lib';
@@ -24,7 +24,7 @@ class AgenciesDocument extends Document {
     }
 }
 
-AgenciesDocument.getInitialProps = async (context: DocumentContext) => {
+AgenciesDocument.getInitialProps = async (context) => {
     const sheets = new ServerStyleSheets();
     const originalRenderPage = context.renderPage;
 

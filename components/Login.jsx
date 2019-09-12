@@ -9,12 +9,11 @@ import {
   FormLabel
 } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-import LoginState from "../interfaces/LoginState";
 
 class Login extends Component {
-  state: LoginState;
+  state;
 
-  constructor(props: any) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -27,7 +26,7 @@ class Login extends Component {
     };
   }
 
-  doAuthentication(credentials: Object) {
+  doAuthentication(credentials) {
     alert(`AUTH: ${JSON.stringify(credentials)}`);
   }
 
