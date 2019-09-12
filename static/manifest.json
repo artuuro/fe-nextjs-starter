@@ -3,11 +3,10 @@
   "short_name": "DoverGreen",
   "theme_color": "#4e9b47",
   "background_color": "#fafafa",
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
-  "icons": [
-    {
+  "icons": [{
       "src": "/static/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"

@@ -1,14 +1,27 @@
 import { Component } from "react";
-import { Navigation } from '.';
-import Link from 'next/link';
-import css from '../less';
-import { AppBar, Toolbar, Grid } from '@material-ui/core';
+import { Navigation, UserMenu } from "./";
+import Link from "next/link";
+import css from "../less";
+import { Memory } from "../lib";
+import { AppBar, Toolbar, Grid } from "@material-ui/core";
 
 class Topbar extends Component {
-  props;
-  
+  state;
+  memory;
+  helpers;
+
+
   constructor(props) {
     super(props);
+    this.state = {
+      authenticated: true,
+      user: {}
+    };
+  }
+
+  componentDidMount() {
+    //this.memory = new Memory(window.localStorage);
+    //this.helpers = new Helpers(this.memory);
   }
 
   render() {
@@ -24,10 +37,14 @@ class Topbar extends Component {
               </Link>
             </Grid>
             <Grid item className={css.navigation}>
-              <Navigation links={[
-                { url: 'agencies', as: 'Agencies' }, 
-                { url: 'signup', as: 'Sign-up' }
-              ]}/>
+              {
+                this.state.authenticated
+                ? <UserMenu />
+                : <Navigation links={[
+                  { url: 'agencies', as: 'Agencies' },
+                  { url: 'signup', as: 'Registration' }
+                ]}/>
+              }
             </Grid>
           </Grid>
         </Toolbar>

@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Container, Grid, Paper, Typography } from "@material-ui/core";
-import { Header } from "../components";
-import css from '../less';
+import { Header, Registration } from "../components";
+import css from "../less";
 
 
 class SignupPage extends Component {
@@ -15,9 +15,7 @@ class SignupPage extends Component {
               <Typography variant="h5" component="h3" className={css.headingText}>
                 Sign-up
               </Typography>
-              <Typography component="p">
-                This is signup page
-              </Typography>
+              <Registration />
             </Paper>
           </Grid>
         </Grid>

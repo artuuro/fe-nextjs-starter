@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { Login, Header } from "../components";
-import { Storage } from "../lib";
+import { Memory } from "../lib";
 import { Container, Grid, Card, Paper, Typography } from "@material-ui/core";
-import css from '../less';
+import css from "../less";
 
 export default class AgenciesPage extends Component {
   state;
@@ -16,7 +16,7 @@ export default class AgenciesPage extends Component {
   }
 
   componentDidMount() {
-    this.memory = new Storage(window.localStorage);
+    this.memory = new Memory(window.localStorage);
 
     const counter = this.memory.get('counter');
     if (counter) {
@@ -44,7 +44,7 @@ export default class AgenciesPage extends Component {
               </Typography>
               <Typography component="p">
                 <button onClick={() => this.setState({ counter: parseInt(this.state.counter) + 1 })}>Click</button>
-                { this.state.counter ? ` clicked ${this.state.counter} times ` : ``} 
+                { this.state.counter ? ` clicked ${this.state.counter} times ` : ``}
                 { this.state.counter ? <button onClick={() => this.setState({ counter: 0 })}>Reset</button> : `` }
               </Typography>
             </Paper>

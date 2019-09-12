@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { Container, Grid, Card, Paper, Typography } from "@material-ui/core";
 import { Login, Header } from "../components";
-import { Storage } from "../lib";
-import css from '../less';
+import { Memory } from "../lib";
+import css from "../less";
 
 class IndexPage extends Component {
   memory;
@@ -16,7 +16,7 @@ class IndexPage extends Component {
   }
 
   componentDidMount() {
-    this.memory = new Storage(window.localStorage);
+    this.memory = new Memory(window.localStorage);
     this.setState(this.memory.getAll());
   }
 

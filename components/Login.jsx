@@ -37,7 +37,7 @@ class Login extends Component {
   render() {
     return (
       <FormGroup>
-        <FormLabel>Sign-in</FormLabel>
+        <FormLabel>Authentication</FormLabel>
         <FormControl>
           <TextField
             margin="dense"

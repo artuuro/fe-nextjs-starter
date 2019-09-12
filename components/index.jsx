@@ -4,6 +4,7 @@ import Login from './Login';
 import Header from './Header';
 import Footer from './Footer';
 import Navigation from './Navigation';
+import UserMenu from './UserMenu';
 
 export {
     Topbar,
@@ -11,5 +12,6 @@ export {
     Login,
     Header,
     Footer,
-    Navigation
+    Navigation,
+    UserMenu
 }
