@@ -1,20 +1,19 @@
 import { Component } from "react";
 import { Container, Grid, Paper, Typography } from "@material-ui/core";
-import { Header, Registration } from "../components";
+import { Header } from "../components";
 import css from "../less";
 
-class SignupPage extends Component {
+class DashboardPage extends Component {
   render() {
     return (
       <Container>
-        <Header title="Registration" description="Signup page" />
+        <Header title="Dashboard" description="Dashboard" />
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Paper className={css.padded}>
               <Typography variant="h5" component="h3" className={css.headingText}>
-                Sign-up
+                DASHBOARD
               </Typography>
-              <Registration />
             </Paper>
           </Grid>
         </Grid>
@@ -23,4 +22,4 @@ class SignupPage extends Component {
   }
 }
 
-export default SignupPage;
+export default DashboardPage;

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Router from "next/router";
 import {
   TextField,
   InputAdornment,
@@ -9,6 +10,8 @@ import {
   FormLabel
 } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
+import { connect } from "react-redux";
+import { signin } from "../store";
 
 class Login extends Component {
   state;
@@ -27,7 +30,9 @@ class Login extends Component {
   }
 
   doAuthentication(credentials) {
-    alert(`AUTH: ${JSON.stringify(credentials)}`);
+    console.log(`AUTH: ${JSON.stringify(credentials)}`);
+    this.props.signin();
+    Router.push('/dashboard');
   }
 
   validateInputs() {
@@ -105,4 +110,9 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = { signin };
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Login);

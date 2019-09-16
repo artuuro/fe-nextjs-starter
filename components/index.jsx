@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
+import Loading from './Loading';
 
 export {
     Topbar,
@@ -13,5 +14,6 @@ export {
     Header,
     Footer,
     Navigation,
-    UserMenu
+    UserMenu,
+    Loading
 }

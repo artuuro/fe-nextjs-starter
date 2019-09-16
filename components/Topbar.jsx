@@ -2,27 +2,16 @@ import { Component } from "react";
 import { Navigation, UserMenu } from "./";
 import Link from "next/link";
 import css from "../less";
-import { Memory } from "../lib";
 import { AppBar, Toolbar, Grid } from "@material-ui/core";
+import { connect } from "react-redux";
 
 class Topbar extends Component {
-  state;
-  memory;
-  helpers;
+  static getInitialProps({ store }) {
 
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      authenticated: true,
-      user: {}
+    return {
+      ...store.getState()
     };
-  }
-
-  componentDidMount() {
-    //this.memory = new Memory(window.localStorage);
-    //this.helpers = new Helpers(this.memory);
-  }
+  } 
 
   render() {
     return (
@@ -38,7 +27,7 @@ class Topbar extends Component {
             </Grid>
             <Grid item className={css.navigation}>
               {
-                this.state.authenticated
+                this.props.isAuthenticated
                 ? <UserMenu />
                 : <Navigation links={[
                   { url: 'agencies', as: 'Agencies' },
@@ -53,4 +42,11 @@ class Topbar extends Component {
   }
 }
 
-export default Topbar;
+const mapStateToProps = state => ({
+  isAuthenticated: state.isAuthenticated
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(Topbar);
