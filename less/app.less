@@ -2,11 +2,19 @@
 
 body {
     padding-top: 80px;
-    @media (max-width: 380px) {
+    @media (max-width: 440px) {
         padding-top: 96px;
     }
     @media (min-width: 381px) and (max-width: 600px) {
-        padding-top: 75px;
+        padding-top: 80px;
+    }
+}
+
+a {
+    &:active,
+    &:visited,
+    &:focus {
+        outline: none;
     }
 }
 
@@ -25,6 +33,11 @@ body {
 
 .appBar {
     border-bottom: 2px solid @green;
+}
+
+.formDivider {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .navigation {
@@ -47,4 +60,28 @@ body {
             }
         }
     }
+}
+
+.footer {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+        color: @purple;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.signupButtons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }

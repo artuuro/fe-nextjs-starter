@@ -5,5 +5,12 @@ export default createMuiTheme({
     primary: {
       main: '#4e9b47'
     }
+  },
+  overrides: {
+    MuiDivider: {
+      root: {
+        margin: '10px 0'
+      }
+    }
   }
 });

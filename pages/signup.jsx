@@ -6,14 +6,11 @@ import css from "../less";
 class SignupPage extends Component {
   render() {
     return (
-      <Container>
-        <Header title="Registration" description="Signup page" />
+      <Container maxWidth="md">
+        <Header title="Create account" description="Signup page" />
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Paper className={css.padded}>
-              <Typography variant="h5" component="h3" className={css.headingText}>
-                Sign-up
-              </Typography>
               <Registration />
             </Paper>
           </Grid>

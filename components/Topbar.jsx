@@ -31,7 +31,7 @@ class Topbar extends Component {
                 ? <UserMenu />
                 : <Navigation links={[
                   { url: 'agencies', as: 'Agencies' },
-                  { url: 'signup', as: 'Registration' }
+                  { url: 'signup', as: 'Create Account' }
                 ]}/>
               }
             </Grid>

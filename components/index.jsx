@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
 import Loading from './Loading';
+import FormField from './FormField';
 
 export {
     Topbar,
@@ -15,5 +16,6 @@ export {
     Footer,
     Navigation,
     UserMenu,
-    Loading
+    Loading,
+    FormField
 }

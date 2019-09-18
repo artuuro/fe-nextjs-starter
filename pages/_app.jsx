@@ -15,18 +15,17 @@ class AgenciesApp extends App {
 
   render() {
     const { Component, pageProps, store } = this.props;
-
     return (
-      <Provider store={store}>
-        <CssBaseline />
-        <ThemeProvider theme={Theme}>
-          <PersistGate loading={<Loading />} persistor={this.persistor} >
-            <Topbar />
-            <Component {...pageProps} />
-            <Footer />
-          </PersistGate>
-        </ThemeProvider>
-      </Provider>
+        <Provider store={store}>
+          <CssBaseline />
+          <ThemeProvider theme={ Theme }>
+            <PersistGate loading={<Loading />} persistor={ this.persistor } >
+              <Topbar />
+              <Component { ...pageProps }  />
+              <Footer />
+            </PersistGate>
+          </ThemeProvider>
+        </Provider>
     );
   }
 }
