@@ -1,15 +1,5 @@
 @import 'variables';
 
-body {
-    padding-top: 80px;
-    @media (max-width: 440px) {
-        padding-top: 96px;
-    }
-    @media (min-width: 381px) and (max-width: 600px) {
-        padding-top: 80px;
-    }
-}
-
 a {
     &:active,
     &:visited,
@@ -23,6 +13,10 @@ a {
     max-width: @navLogoWidth;
 }
 
+.loading {
+    height: 100vh;
+}
+
 .padded {
     padding: 10px;
 }
@@ -33,6 +27,27 @@ a {
 
 .appBar {
     border-bottom: 2px solid @green;
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            a {
+                font-size: 1.2em;
+                font-weight: 700;
+                color: @green;
+                text-decoration: none;
+                transition: color .5s ease-in-out;
+                &.active,
+                &:hover {
+                    color: @lightGray;
+                }
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
 }
 
 .formDivider {
@@ -40,36 +55,18 @@ a {
     margin-bottom: 10px;
 }
 
-.navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    div {
-        a {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: @green;
-            text-decoration: none;
-            transition: color .5s ease-in-out;
-            &.active,
-            &:hover {
-                color: @purple;
-            }
-            &:not(:first-child) {
-                margin-left: 10px;
-            }
-        }
-    }
+.mainContainer {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .footer {
-    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     p {
-        color: @purple;
+        color: @darkGray;
     }
     a {
         color: inherit;
@@ -84,4 +81,8 @@ a {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+}
+
+.test {
+    border: 1px solid red;
 }

@@ -23,6 +23,7 @@
   "devDependencies": {
     "@zeit/next-less": "^1.0.1",
     "less": "^2.7.3",
+    "react-devtools": "^3",
     "webpack": "^4.39.3"
   },
   "repository": {

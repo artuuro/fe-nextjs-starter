@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 import { Container, Grid, Paper, Typography } from "@material-ui/core";
 import { Header, Registration } from "../components";
 import css from "../less";
@@ -6,9 +6,9 @@ import css from "../less";
 class SignupPage extends Component {
   render() {
     return (
-      <Container maxWidth="md">
+      <Container maxWidth="sm">
         <Header title="Create account" description="Signup page" />
-        <Grid container spacing={2}>
+        <Grid container>
           <Grid item xs={12}>
             <Paper className={css.padded}>
               <Registration />

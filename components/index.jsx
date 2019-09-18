@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import UserMenu from './UserMenu';
 import Loading from './Loading';
 import FormField from './FormField';
+import DashboardMenu from './DashboardMenu';
 
 export {
     Topbar,
@@ -17,5 +18,6 @@ export {
     Navigation,
     UserMenu,
     Loading,
-    FormField
+    FormField,
+    DashboardMenu
 }

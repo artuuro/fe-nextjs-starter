@@ -1,10 +1,10 @@
 const withLess = require('@zeit/next-less');
-const withOffline = require('next-offline');
+//const withOffline = require('next-offline');
 
-module.exports = withOffline(withLess({
+module.exports = withLess({
   cssModules: true,
   poweredByHeader: false,
   lessLoaderOptions: {
     javascriptEnabled: true
   }
-}));
+});

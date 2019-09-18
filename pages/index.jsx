@@ -33,7 +33,7 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Container maxWidth="false">
+      <Container maxWidth="lg">
         <Header title="Home" description="Home page" />
         
         <Grid container spacing={2}>
