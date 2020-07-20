@@ -1,4 +1,4 @@
 export default {
-    title: `DoverGreen`,
-    apiUrl: `http://dovergreenapi/`
+    title: `SampleApp`,
+    apiUrl: `http://localhost/`
 }
