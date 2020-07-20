@@ -1,4 +1,4 @@
-# AGENCIES-FE
+# NextJS / MaterialUI / Redux boilerplate
 
 ### Prerequesities
 - Download and setup Node.js [link](https://nodejs.org/)
